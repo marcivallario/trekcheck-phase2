@@ -3,11 +3,16 @@
     {
       "id": 1,
       "job_number": "300-1",
-      "passenger": "Marci Vallario",
+      "passenger": "Jennifer Davis",
+      "destination": {
+          "city": "Orlando",
+          "state": "FL"
+      },
       "flights": {
           "outbound": {
               "date": "2022-01-05",
               "airline": "Delta Airlines",
+              "flight_number": "3694",
               "departure": {
                   "city": "Nashville",
                   "state": "TN",
@@ -27,6 +32,102 @@
           "return": {
               "date": "2022-01-09",
               "airline": "Delta Airlines",
+              "flight_number": "596",
+               "departure": {
+                  "city": "Orlando",
+                  "state": "FL",
+                  "airport_code": "MCO",
+                  "time": "11:30 AM"
+              },
+              "arrival": {
+                  "city": "Nashville",
+                  "state": "TN",
+                  "airport_code":"BNA",
+                  "time": "2:40 PM"
+              },
+              "seat": "15C",
+              "confirmation": "57HJ8K",
+              "customer_service_phone": "1-800-221-1212"              
+          }
+      },
+      "transportation": {
+          "outbound": {
+              "to_airport": {
+                  "date": "2022-01-05",
+                  "method": "Rideshare Service",
+                  "notes": "Please keep receipts to submit to production for reimbursement."
+              },
+              "from_airport": {
+                  "date": "2022-01-05",
+                  "method": "Enterprise Rent-A-Car",
+                  "notes": "Reservation #3947539242"
+              }
+          },
+          "return": {
+              "to_airport": {
+                  "date": "2022-01-09",
+                  "method": "Enterprise Rent-A-Car",
+                  "notes": "Return rental car to airport."
+              },
+              "from_airport": {
+                  "date": "2022-01-09",
+                  "method": "Rideshare Service",
+                  "notes": "Please keep receipts to submit to production for reimbursement."
+              }
+          }
+      },
+      "accommodations": {
+          "hotel": "Hilton Garden Inn Orlando",
+          "address1": "401 N Magnolia Ave",
+          "address2": null,
+          "city": "Orlando",
+          "state": "FL",
+          "zip": 32801,
+          "phone": "407-648-4171",
+          "confirmation": "5739574729",
+          "checkin": {
+              "date": "2022-01-05",
+              "time": "3:00 PM"
+          },
+          "checkout": {
+              "date": "2022-01-09",
+              "time": "11:00 AM"
+          }
+      }
+    },
+    {
+      "id": 2,
+      "job_number": "300-1",
+      "passenger": "Jennifer Davis",
+      "destination": {
+          "city": "Orlando",
+          "state": "FL"
+      },
+      "flights": {
+          "outbound": {
+              "date": "2022-01-05",
+              "airline": "Delta Airlines",
+              "flight_number": "3694",
+              "departure": {
+                  "city": "Nashville",
+                  "state": "TN",
+                  "airport_code": "BNA",
+                  "time": "10:30 AM"
+              },
+              "arrival": {
+                  "city": "Orlando",
+                  "state": "FL",
+                  "airport_code": "MCO",
+                  "time": "1:10 PM"
+              },
+              "seat": "34A", 
+              "confirmation": "57HJ8K",
+              "customer_service_phone": "1-800-221-1212"
+          },
+          "return": {
+              "date": "2022-01-09",
+              "airline": "Delta Airlines",
+              "flight_number": "596",
                "departure": {
                   "city": "Orlando",
                   "state": "FL",

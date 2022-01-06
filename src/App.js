@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Banner from "./components/Banner"
+import Header from "./components/Header";
+import ItineraryList from "./components/ItineraryList";
+import AddItineraryForm from "./components/AddItineraryForm";
+import { useState, useEffect } from 'react';
+import { Route, Switch } from "react-router-dom";
 
 function App() {
+const [ itineraries, setItineraries ] = useState([]);
+  
+  useEffect(() => {
+    fetch(`http://localhost:3004/reservations`)
+    .then(resp => resp.json())
+    .then(data => setItineraries(data))
+  }, [])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Switch>
+        <Route exact path="/add">
+          <AddItineraryForm />
+        </Route>
+        <Route exact path="/itineraries">
+          <ItineraryList itineraries={itineraries}/>
+        </Route>
+        <Route exact path="/">
+          <Banner />
+          <ItineraryList itineraries={itineraries}/>
+        </Route>
+      </Switch>
     </div>
   );
 }
