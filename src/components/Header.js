@@ -1,5 +1,5 @@
 import logo from "../assests/logo.png"
-import { NavLink } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 
 function Header() {
     const linkStyles = {
@@ -11,7 +11,9 @@ function Header() {
 
     return (
         <nav>
-            <img src={logo} alt="Trek Check" title="Trek Check" />
+            <Route render={({ history }) => (
+                <img src={logo} alt="Trek Check" title="Trek Check" onClick={() => { history.push('/') }}/>
+            )} />
             <div id="nav-container">
                 <div id="navlink">
                     <NavLink

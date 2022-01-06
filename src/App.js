@@ -13,13 +13,17 @@ const [ itineraries, setItineraries ] = useState([]);
     .then(resp => resp.json())
     .then(data => setItineraries(data))
   }, [])
+
+  function onAdd(newItinerary) {
+    setItineraries([...itineraries, newItinerary])
+  }
   
   return (
     <div>
       <Header />
       <Switch>
         <Route exact path="/add">
-          <AddItineraryForm />
+          <AddItineraryForm onAdd={onAdd}/>
         </Route>
         <Route exact path="/itineraries">
           <ItineraryList itineraries={itineraries}/>

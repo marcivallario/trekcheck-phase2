@@ -35,6 +35,10 @@ body {
   color: #3e4e57
 }
 
+textarea {
+  resize: none;
+}
+
 /* Header */
 nav img {
   width: 200px;
@@ -122,7 +126,7 @@ nav p {
   width: 150px;
   height: 150px;
   background: rgba( 255, 255, 255, 0.2 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  box-shadow: 0 8px 32px 0 rgb(77,98,109, 0.37);
   backdrop-filter: blur( 10px );
   -webkit-backdrop-filter: blur( 10px );
   border-radius: 10px;
@@ -200,3 +204,84 @@ nav p {
   text-align: center;
 }
 
+/* Add Form */
+#add-form-container {
+  background-image: url('./assests/background.jpg');
+  min-height: 100vh;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  padding: 200px;
+}
+
+#add-form {
+  text-align: center;
+  background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: 0 8px 32px 0 rgb(77,98,109, 0.37);
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
+  border-radius: 10px;
+  padding: 100px;
+}
+
+.add-container {
+  margin-top: 30px;
+}
+
+#flights-info, #transportation-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+#outbound-flight, #return-flight, #outbound-transpo, #return-transpo {
+  flex-basis: 400px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 10px;
+  border: 1px solid #c3c2ca;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px
+}
+
+#add-form h6, #add-form h5 {
+  font-size: 15px;
+  font-family: 'Manrope', sans-serif;
+}
+
+#add-form h5 {
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+label {
+  font-size: 14px;
+  font-style: italic;
+}
+
+#submit {
+  width: 150px;
+  margin: 0 auto;
+  background-color: #4d626d;
+  border: 2px solid #4d626d;
+  color: #eaeaef;
+  border-radius: 40px;
+  padding: 10px 30px;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+#submit:hover {
+  background-color: transparent;
+  border: 2px solid #4d626d;
+  color: #4d626d;
+}
+
+#submit:active {
+  background-color: #eaeaef;
+  border: 2px solid #4d626d;
+  color: #4d626d;
+}

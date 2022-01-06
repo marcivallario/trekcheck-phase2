@@ -4,191 +4,161 @@
       "id": 1,
       "job_number": "300-1",
       "passenger": "Jennifer Davis",
-      "destination": {
-          "city": "Orlando",
-          "state": "FL"
-      },
-      "flights": {
-          "outbound": {
-              "date": "2022-01-05",
-              "airline": "Delta Airlines",
-              "flight_number": "3694",
-              "departure": {
-                  "city": "Nashville",
-                  "state": "TN",
-                  "airport_code": "BNA",
-                  "time": "10:30 AM"
-              },
-              "arrival": {
-                  "city": "Orlando",
-                  "state": "FL",
-                  "airport_code": "MCO",
-                  "time": "1:10 PM"
-              },
-              "seat": "34A", 
-              "confirmation": "57HJ8K",
-              "customer_service_phone": "1-800-221-1212"
-          },
-          "return": {
-              "date": "2022-01-09",
-              "airline": "Delta Airlines",
-              "flight_number": "596",
-               "departure": {
-                  "city": "Orlando",
-                  "state": "FL",
-                  "airport_code": "MCO",
-                  "time": "11:30 AM"
-              },
-              "arrival": {
-                  "city": "Nashville",
-                  "state": "TN",
-                  "airport_code":"BNA",
-                  "time": "2:40 PM"
-              },
-              "seat": "15C",
-              "confirmation": "57HJ8K",
-              "customer_service_phone": "1-800-221-1212"              
-          }
-      },
-      "transportation": {
-          "outbound": {
-              "to_airport": {
-                  "date": "2022-01-05",
-                  "method": "Rideshare Service",
-                  "notes": "Please keep receipts to submit to production for reimbursement."
-              },
-              "from_airport": {
-                  "date": "2022-01-05",
-                  "method": "Enterprise Rent-A-Car",
-                  "notes": "Reservation #3947539242"
-              }
-          },
-          "return": {
-              "to_airport": {
-                  "date": "2022-01-09",
-                  "method": "Enterprise Rent-A-Car",
-                  "notes": "Return rental car to airport."
-              },
-              "from_airport": {
-                  "date": "2022-01-09",
-                  "method": "Rideshare Service",
-                  "notes": "Please keep receipts to submit to production for reimbursement."
-              }
-          }
-      },
-      "accommodations": {
-          "hotel": "Hilton Garden Inn Orlando",
-          "address1": "401 N Magnolia Ave",
-          "address2": null,
-          "city": "Orlando",
-          "state": "FL",
-          "zip": 32801,
-          "phone": "407-648-4171",
-          "confirmation": "5739574729",
-          "checkin": {
-              "date": "2022-01-05",
-              "time": "3:00 PM"
-          },
-          "checkout": {
-              "date": "2022-01-09",
-              "time": "11:00 AM"
-          }
-      }
+      "flight_outbound_date": "2022-01-05",
+      "flight_outbound_num": "Delta 6943",
+      "flight_outbound_dep_city": "Nashville, TN",
+      "flight_outbound_dep_code": "BNA",
+      "flight_outbound_dep_time": "10:30 AM",
+      "flight_outbound_arr_city": "Orlando, FL",
+      "flight_outbound_arr_code": "MCO",
+      "flight_outbound_arr_time": "1:10 PM",
+      "flight_outbound_seat": "34A",
+      "flight_outbound_conf": "57HJ8K",
+      "flight_outbound_custphone": "1-800-221-1212",
+      "flight_return_date": "2022-01-09",
+      "flight_return_num": "Delta 583",
+      "flight_return_dep_city": "Orlando, FL",
+      "flight_return_dep_code": "MCO",
+      "flight_return_dep_time": "11:30 AM",
+      "flight_return_arr_city": "Nashville, TN",
+      "flight_return_arr_code": "BNA",
+      "flight_return_arr_time": "2:40 PM",
+      "flight_return_seat": "15C",
+      "flight_return_conf": "57HJ8K",
+      "flight_return_custphone": "1-800-221-1212",
+      "transportation_outbound_toair_method": "Rideshare Service",
+      "transportation_outbound_fromair_method": "Enterprise Rent-A-Car",
+      "transportation_return_toair_method": "Enterprise Rent-A-Car",
+      "transportation_return_fromair_method": "Rideshare Service",
+      "accommodations_hotel": "Hilton Garden Inn Orlando",
+      "accommodations_address": "401 N Magnolia Ave",
+      "accommodations_city": "Orlando",
+      "accommodations_state": "FL",
+      "accommodations_zip": 32801,
+      "accommodations_phone": "407-648-4171",
+      "accommodations_confirmation": "5739574729",
+      "accommodations_checkin": "2022-01-05 @ 3:00 PM",
+      "accommodations_checkout": "2022-01-09 @ 11:00 AM"
     },
     {
-      "id": 2,
-      "job_number": "300-1",
-      "passenger": "Jennifer Davis",
-      "destination": {
-          "city": "Orlando",
-          "state": "FL"
-      },
-      "flights": {
-          "outbound": {
-              "date": "2022-01-05",
-              "airline": "Delta Airlines",
-              "flight_number": "3694",
-              "departure": {
-                  "city": "Nashville",
-                  "state": "TN",
-                  "airport_code": "BNA",
-                  "time": "10:30 AM"
-              },
-              "arrival": {
-                  "city": "Orlando",
-                  "state": "FL",
-                  "airport_code": "MCO",
-                  "time": "1:10 PM"
-              },
-              "seat": "34A", 
-              "confirmation": "57HJ8K",
-              "customer_service_phone": "1-800-221-1212"
-          },
-          "return": {
-              "date": "2022-01-09",
-              "airline": "Delta Airlines",
-              "flight_number": "596",
-               "departure": {
-                  "city": "Orlando",
-                  "state": "FL",
-                  "airport_code": "MCO",
-                  "time": "11:30 AM"
-              },
-              "arrival": {
-                  "city": "Nashville",
-                  "state": "TN",
-                  "airport_code":"BNA",
-                  "time": "2:40 PM"
-              },
-              "seat": "15C",
-              "confirmation": "57HJ8K",
-              "customer_service_phone": "1-800-221-1212"              
-          }
-      },
-      "transportation": {
-          "outbound": {
-              "to_airport": {
-                  "date": "2022-01-05",
-                  "method": "Rideshare Service",
-                  "notes": "Please keep receipts to submit to production for reimbursement."
-              },
-              "from_airport": {
-                  "date": "2022-01-05",
-                  "method": "Enterprise Rent-A-Car",
-                  "notes": "Reservation #3947539242"
-              }
-          },
-          "return": {
-              "to_airport": {
-                  "date": "2022-01-09",
-                  "method": "Enterprise Rent-A-Car",
-                  "notes": "Return rental car to airport."
-              },
-              "from_airport": {
-                  "date": "2022-01-09",
-                  "method": "Rideshare Service",
-                  "notes": "Please keep receipts to submit to production for reimbursement."
-              }
-          }
-      },
-      "accommodations": {
-          "hotel": "Hilton Garden Inn Orlando",
-          "address1": "401 N Magnolia Ave",
-          "address2": null,
-          "city": "Orlando",
-          "state": "FL",
-          "zip": 32801,
-          "phone": "407-648-4171",
-          "confirmation": "5739574729",
-          "checkin": {
-              "date": "2022-01-05",
-              "time": "3:00 PM"
-          },
-          "checkout": {
-              "date": "2022-01-09",
-              "time": "11:00 AM"
-          }
-      }
+      "job_number": "",
+      "passenger": "",
+      "flight_outbound_date": "",
+      "flight_outbound_num": "",
+      "flight_outbound_dep_city": "",
+      "flight_outbound_dep_code": "",
+      "flight_outbound_dep_time": "",
+      "flight_outbound_arr_city": "",
+      "flight_outbound_arr_code": "",
+      "flight_outbound_arr_time": "",
+      "flight_outbound_seat": "",
+      "flight_outbound_conf": "",
+      "flight_outbound_custphone": "",
+      "flight_return_date": "",
+      "flight_return_num": "",
+      "flight_return_dep_city": "",
+      "flight_return_dep_code": "",
+      "flight_return_dep_time": "",
+      "flight_return_arr_city": "",
+      "flight_return_arr_code": "",
+      "flight_return_arr_time": "",
+      "flight_return_seat": "",
+      "flight_return_conf": "",
+      "flight_return_custphone": "",
+      "transportation_outbound_toair_method": "",
+      "transportation_outbound_fromair_method": "",
+      "transportation_return_toair_method": "",
+      "transportation_return_fromair_method": "",
+      "accommodations_hotel": "",
+      "accommodations_address": "",
+      "accommodations_city": "",
+      "accommodations_state": "",
+      "accommodations_zip": "",
+      "accommodations_phone": "",
+      "accommodations_confirmation": "",
+      "accommodations_checkin": "",
+      "accommodations_checkout": "",
+      "id": 2
+    },
+    {
+      "job_number": "",
+      "passenger": "",
+      "flight_outbound_date": "",
+      "flight_outbound_num": "",
+      "flight_outbound_dep_city": "",
+      "flight_outbound_dep_code": "",
+      "flight_outbound_dep_time": "",
+      "flight_outbound_arr_city": "",
+      "flight_outbound_arr_code": "",
+      "flight_outbound_arr_time": "",
+      "flight_outbound_seat": "",
+      "flight_outbound_conf": "",
+      "flight_outbound_custphone": "",
+      "flight_return_date": "",
+      "flight_return_num": "",
+      "flight_return_dep_city": "",
+      "flight_return_dep_code": "",
+      "flight_return_dep_time": "",
+      "flight_return_arr_city": "",
+      "flight_return_arr_code": "",
+      "flight_return_arr_time": "",
+      "flight_return_seat": "",
+      "flight_return_conf": "",
+      "flight_return_custphone": "",
+      "transportation_outbound_toair_method": "",
+      "transportation_outbound_fromair_method": "",
+      "transportation_return_toair_method": "",
+      "transportation_return_fromair_method": "",
+      "accommodations_hotel": "",
+      "accommodations_address": "",
+      "accommodations_city": "",
+      "accommodations_state": "",
+      "accommodations_zip": "",
+      "accommodations_phone": "",
+      "accommodations_confirmation": "",
+      "accommodations_checkin": "",
+      "accommodations_checkout": "",
+      "id": 3
+    },
+    {
+      "job_number": "",
+      "passenger": "",
+      "flight_outbound_date": "",
+      "flight_outbound_num": "",
+      "flight_outbound_dep_city": "",
+      "flight_outbound_dep_code": "",
+      "flight_outbound_dep_time": "",
+      "flight_outbound_arr_city": "",
+      "flight_outbound_arr_code": "",
+      "flight_outbound_arr_time": "",
+      "flight_outbound_seat": "",
+      "flight_outbound_conf": "",
+      "flight_outbound_custphone": "",
+      "flight_return_date": "",
+      "flight_return_num": "",
+      "flight_return_dep_city": "",
+      "flight_return_dep_code": "",
+      "flight_return_dep_time": "",
+      "flight_return_arr_city": "",
+      "flight_return_arr_code": "",
+      "flight_return_arr_time": "",
+      "flight_return_seat": "",
+      "flight_return_conf": "",
+      "flight_return_custphone": "",
+      "transportation_outbound_toair_method": "",
+      "transportation_outbound_fromair_method": "",
+      "transportation_return_toair_method": "",
+      "transportation_return_fromair_method": "",
+      "accommodations_hotel": "",
+      "accommodations_address": "",
+      "accommodations_city": "",
+      "accommodations_state": "",
+      "accommodations_zip": "",
+      "accommodations_phone": "",
+      "accommodations_confirmation": "",
+      "accommodations_checkin": "",
+      "accommodations_checkout": "",
+      "id": 4
     }
   ]
 }
