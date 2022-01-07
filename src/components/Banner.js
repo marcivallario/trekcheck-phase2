@@ -14,9 +14,9 @@ function Banner({ filterItineraries }) {
                 )} />
             </div>
             <div id="buttons">
-                <a href="https://travel.state.gov/content/travel/en/traveladvisories/ea/requirements-for-air-travelers-to-the-us.html" target="_blank"><button className="sort-button">COVID-19 Traveler Information</button></a>
-                <a href="https://flightaware.com/" target="_blank"><button className="sort-button">Flight Tracker</button></a>
-                <a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html/" target="_blank"><button className="sort-button">Travel Alerts</button></a>
+                <a href="https://travel.state.gov/content/travel/en/traveladvisories/ea/requirements-for-air-travelers-to-the-us.html" target="_blank" rel="noreferrer"><button className="sort-button">COVID-19 Traveler Information</button></a>
+                <a href="https://flightaware.com/" target="_blank" rel="noreferrer"><button className="sort-button">Flight Tracker</button></a>
+                <a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html/" target="_blank" rel="noreferrer"><button className="sort-button">Travel Alerts</button></a>
 
                 {/* <button className="sort-button" id="all" onClick={filterItineraries}>All <br/>Reservations</button>
                 <button className="sort-button" id="upcoming" onClick={filterItineraries}>Upcoming Reservations</button>

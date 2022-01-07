@@ -1,10 +1,23 @@
+import { useState, useEffect } from 'react';
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+
 function Itinerary({ itinerary, onDelete }) {
+    const [ weather, setWeather ] = useState('Loading...');
     function handleDelete() {
         fetch(`http://localhost:3004/reservations/${itinerary.id}`, {
             method: 'DELETE'
             })
         .then(onDelete(itinerary.id));
     }
+
+    useEffect(() => {
+        const city = itinerary.flight_outbound_arr_city.split(',')
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city[0]}&appid=${API_KEY}&units=imperial`)
+        .then(r => r.json())
+        .then(data => setWeather(data.main.temp));
+    })
+        
+    
     
     return (
     <div className="itinerary-container">
@@ -137,7 +150,7 @@ function Itinerary({ itinerary, onDelete }) {
                 </ul>
             </div>
         </div>
-        <div className="weather">Current weather in {itinerary.flight_outbound_arr_city}:</div>
+        <div className="weather">Current weather in {itinerary.flight_outbound_arr_city}: {typeof weather === "string"? weather : Math.floor(weather)} &#176;F</div>
         <div className="delete" onClick={handleDelete}>X</div>
     </div>
     )

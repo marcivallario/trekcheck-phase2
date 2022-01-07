@@ -7,14 +7,13 @@ import { Route, Switch } from "react-router-dom";
 
 function App() {
 const [ itineraries, setItineraries ] = useState([]);
-const [ visibleItineraries, setVisibleItineraries ] = useState(itineraries);
+// const [ visibleItineraries, setVisibleItineraries ] = useState(itineraries);
   
   useEffect(() => {
     fetch(`http://localhost:3004/reservations`)
     .then(resp => resp.json())
     .then(data => {
       setItineraries(data)
-      setVisibleItineraries(itineraries);
     })
   }, [])
 
@@ -26,21 +25,21 @@ const [ visibleItineraries, setVisibleItineraries ] = useState(itineraries);
     setItineraries(itineraries.filter(itinerary => itinerary.id !== itineraryToDeleteId));
   }
 
-  function filterItineraries(e) {
-    let today= new Date();
-    setVisibleItineraries(() => itineraries.filter(itinerary => {
-      if (e.target.textContent === "Upcoming Reservations") {
-        return Date.parse(itinerary.flight_outbound_date) > Date.parse(today)
-      } 
-      else if (e.target.textContent === "Archive") {
-        return Date.parse(itinerary.flight_outbound_date) < Date.parse(today)
-      }
-      else {
-        return true;
-      }
-    }))
-    
-  }
+  // function filterItineraries(e) {
+  //   let today= new Date();
+  //   setVisibleItineraries(() => itineraries.filter(itinerary => {
+  //     if (e.target.textContent === "Upcoming Reservations") {
+  //       return Date.parse(itinerary.flight_outbound_date) > Date.parse(today)
+  //     } 
+  //     else if (e.target.textContent === "Archive") {
+  //       return Date.parse(itinerary.flight_outbound_date) < Date.parse(today)
+  //     }
+  //     else {
+  //       return true;
+  //     }
+  //   }))
+
+  // }
   
   return (
     <div>
@@ -53,7 +52,7 @@ const [ visibleItineraries, setVisibleItineraries ] = useState(itineraries);
           <ItineraryList itineraries={itineraries} onDelete={onDelete}/>
         </Route>
         <Route exact path="/">
-          <Banner filterItineraries={filterItineraries}/>
+          <Banner/>
         </Route>
       </Switch>
     </div>
