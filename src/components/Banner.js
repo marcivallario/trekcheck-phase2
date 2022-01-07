@@ -11,6 +11,7 @@ function Banner() {
                 )} />
             </div>
             <div id="buttons">
+                <div className="sort-button" id="all"><p>All<br/>Reservations</p></div>
                 <div className="sort-button" id="upcoming"><p>Upcoming Reservations</p></div>
                 <div className="sort-button" id="archive"><p>Archive</p></div>
             </div>
