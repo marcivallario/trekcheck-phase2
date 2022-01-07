@@ -123,6 +123,10 @@ nav p {
   color: #eaeaef;
 }
 
+#view-button {
+  margin-left: 30px;
+}
+
 #buttons {
   display: flex;
   flex-flow: column;
@@ -147,7 +151,7 @@ nav p {
   color: #3e4e57;
 }
 
-.sort-button:not(:first-child) {
+a:not(:first-child) {
   margin-top: 20px;
 }
 
@@ -233,6 +237,21 @@ ul li {
 .weather {
   text-align: center;
   font-style: italic;
+}
+
+.delete {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 800;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.delete:hover {
+  font-style: italic;
+  color: #9499a4;
 }
 
 /* Add Form */

@@ -12,11 +12,18 @@ const [ visibleItineraries, setVisibleItineraries ] = useState(itineraries);
   useEffect(() => {
     fetch(`http://localhost:3004/reservations`)
     .then(resp => resp.json())
-    .then(data => setItineraries(data))
+    .then(data => {
+      setItineraries(data)
+      setVisibleItineraries(itineraries);
+    })
   }, [])
 
   function onAdd(newItinerary) {
     setItineraries([...itineraries, newItinerary])
+  }
+
+  function onDelete(itineraryToDeleteId) {
+    setItineraries(itineraries.filter(itinerary => itinerary.id !== itineraryToDeleteId));
   }
 
   function filterItineraries(e) {
@@ -32,6 +39,7 @@ const [ visibleItineraries, setVisibleItineraries ] = useState(itineraries);
         return true;
       }
     }))
+    
   }
   
   return (
@@ -42,11 +50,10 @@ const [ visibleItineraries, setVisibleItineraries ] = useState(itineraries);
           <AddItineraryForm onAdd={onAdd}/>
         </Route>
         <Route exact path="/itineraries">
-          <ItineraryList itineraries={itineraries}/>
+          <ItineraryList itineraries={itineraries} onDelete={onDelete}/>
         </Route>
         <Route exact path="/">
           <Banner filterItineraries={filterItineraries}/>
-          <ItineraryList itineraries={visibleItineraries}/>
         </Route>
       </Switch>
     </div>

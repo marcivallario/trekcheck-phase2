@@ -1,4 +1,11 @@
-function Itinerary({ itinerary }) {
+function Itinerary({ itinerary, onDelete }) {
+    function handleDelete() {
+        fetch(`http://localhost:3004/reservations/${itinerary.id}`, {
+            method: 'DELETE'
+            })
+        .then(onDelete(itinerary.id));
+    }
+    
     return (
     <div className="itinerary-container">
         <div className="header">
@@ -131,6 +138,7 @@ function Itinerary({ itinerary }) {
             </div>
         </div>
         <div className="weather">Current weather in {itinerary.flight_outbound_arr_city}:</div>
+        <div className="delete" onClick={handleDelete}>X</div>
     </div>
     )
 }
