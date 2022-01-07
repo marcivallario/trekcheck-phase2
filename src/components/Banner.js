@@ -1,6 +1,6 @@
 import {Route} from 'react-router-dom'
 
-function Banner() {
+function Banner({ filterItineraries }) {
     return (
         <div id="banner">
             <div id="header">
@@ -11,9 +11,9 @@ function Banner() {
                 )} />
             </div>
             <div id="buttons">
-                <div className="sort-button" id="all"><p>All<br/>Reservations</p></div>
-                <div className="sort-button" id="upcoming"><p>Upcoming Reservations</p></div>
-                <div className="sort-button" id="archive"><p>Archive</p></div>
+                <button className="sort-button" id="all" onClick={filterItineraries}>All <br/>Reservations</button>
+                <button className="sort-button" id="upcoming" onClick={filterItineraries}>Upcoming Reservations</button>
+                <button className="sort-button" id="archive" onClick={filterItineraries}>Archive</button>
             </div>
         </div>
     )

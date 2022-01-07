@@ -108,6 +108,7 @@ nav p {
   padding: 10px 30px;
   font-weight: 700;
   margin-top: 40px;
+  cursor: pointer;
 }
 
 #header button:hover {
@@ -122,6 +123,14 @@ nav p {
   color: #eaeaef;
 }
 
+#buttons {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
 .sort-button {
   width: 150px;
   height: 150px;
@@ -130,16 +139,15 @@ nav p {
   backdrop-filter: blur( 10px );
   -webkit-backdrop-filter: blur( 10px );
   border-radius: 10px;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
   margin-right: 50px;
   cursor: pointer;
+  border: none;
+  text-align: center;
+  font-weight: 800;
+  color: #3e4e57;
 }
 
-.sort-button:last-child {
+.sort-button:not(:first-child) {
   margin-top: 20px;
 }
 
@@ -150,11 +158,6 @@ nav p {
 
 .sort-button:active {
   background: #5f666e;
-}
-
-.sort-button p {
-  text-align: center;
-  font-weight: 800;
 }
 
 #itinerary-list {
@@ -246,7 +249,7 @@ ul li {
   text-align: center;
   background: rgba( 255, 255, 255, 0.1 );
   box-shadow: 0 8px 32px 0 rgb(77,98,109, 0.37);
-  backdrop-filter: blur( 10px );
+  backdrop-filter: blur( 20px );
   -webkit-backdrop-filter: blur( 10px );
   border-radius: 10px;
   padding: 100px;

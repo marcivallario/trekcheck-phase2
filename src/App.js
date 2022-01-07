@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom";
 
 function App() {
 const [ itineraries, setItineraries ] = useState([]);
+const [ visibleItineraries, setVisibleItineraries ] = useState(itineraries);
   
   useEffect(() => {
     fetch(`http://localhost:3004/reservations`)
@@ -16,6 +17,21 @@ const [ itineraries, setItineraries ] = useState([]);
 
   function onAdd(newItinerary) {
     setItineraries([...itineraries, newItinerary])
+  }
+
+  function filterItineraries(e) {
+    let today= new Date();
+    setVisibleItineraries(() => itineraries.filter(itinerary => {
+      if (e.target.textContent === "Upcoming Reservations") {
+        return Date.parse(itinerary.flight_outbound_date) > Date.parse(today)
+      } 
+      else if (e.target.textContent === "Archive") {
+        return Date.parse(itinerary.flight_outbound_date) < Date.parse(today)
+      }
+      else {
+        return true;
+      }
+    }))
   }
   
   return (
@@ -29,8 +45,8 @@ const [ itineraries, setItineraries ] = useState([]);
           <ItineraryList itineraries={itineraries}/>
         </Route>
         <Route exact path="/">
-          <Banner />
-          <ItineraryList itineraries={itineraries}/>
+          <Banner filterItineraries={filterItineraries}/>
+          <ItineraryList itineraries={visibleItineraries}/>
         </Route>
       </Switch>
     </div>
